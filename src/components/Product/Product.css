@@ -17,6 +17,7 @@
   width: 100%;
   object-fit: contain;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .product__info {
@@ -35,4 +36,13 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+}
+
+.product__rating {
+  display: flex;
+  flex-direction: row;
+}
+
+.product__title {
+  justify-content: flex-start;
 }
