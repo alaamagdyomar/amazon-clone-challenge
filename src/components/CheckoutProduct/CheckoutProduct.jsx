@@ -12,7 +12,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
           <strong>{price}</strong>
         </p>
         <div className="checkoutProduct__rating">
-          {Array(rating) // logic to take the lenth of the array and return back the star as rating
+          {Array(rating) // [0,1,2,3] logic to take the lenth of the array and return back the star as rating
             .fill()
             .map((_, i) => (
               <p key={i}>⭐</p>
