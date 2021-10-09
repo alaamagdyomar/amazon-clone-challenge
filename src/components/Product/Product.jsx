@@ -3,8 +3,8 @@ import { useStateValue } from "../../StateProvider";
 import "./Product.css";
 
 function Product({ id, title, image, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
-  console.log("the Basket object ", basket);
+  // eslint-disable-next-line no-empty-pattern
+  const [{}, dispatch] = useStateValue();
 
   const addToBasket = () => {
     // dispatch the item into the data layer
@@ -32,7 +32,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating) // logic to take the lenth of the array and return back the star as rating
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={i}>⭐</p>
             ))}
         </div>
       </div>

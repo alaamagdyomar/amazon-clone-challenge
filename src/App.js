@@ -8,13 +8,18 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
           <Route path="/checkout">
+            <Header />
             <Checkout />
+          </Route>
+          <Route path="/login">
+            <h1>The Login Page</h1>
+          </Route>
+          {/*Default Route*/}
+          <Route path="/">
+            <Header />
+            <Home />
           </Route>
         </Switch>
       </div>
