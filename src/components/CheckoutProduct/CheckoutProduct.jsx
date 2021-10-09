@@ -1,7 +1,18 @@
 import React from "react";
 import "./CheckoutProduct.css";
+import { useStateValue } from "../../StateProvider";
 
 function CheckoutProduct({ id, title, image, price, rating }) {
+  // eslint-disable-next-line no-empty-pattern
+  const [{}, dispatch] = useStateValue();
+  // remove item handler from basket
+  const removeFromBasket = () => {
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: id,
+    });
+  };
+
   return (
     <div className="checkoutProduct">
       <img src={image} alt="" />
@@ -18,7 +29,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
               <p key={i}>⭐</p>
             ))}
         </div>
-        <button>Remove from basket</button>
+        <button onClick={removeFromBasket}>Remove from basket</button>
       </div>
     </div>
   );
