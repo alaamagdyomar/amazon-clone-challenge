@@ -1,5 +1,8 @@
 .checkoutProduct {
   display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* max-height: 180px; */
 }
 
 .checkoutProduct__image {
