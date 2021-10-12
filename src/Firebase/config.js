@@ -13,6 +13,4 @@ const firebaseApp = firebase.initializeApp({
 
 // eslint-disable-next-line no-undef
 // const db = firebaseApp.firestore();
-const auth = firebase.auth();
-
-export { auth };
+export const auth = firebase.auth();

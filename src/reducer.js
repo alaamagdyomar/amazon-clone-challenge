@@ -1,16 +1,6 @@
 export const initialState = {
   // start with empty basket
-  basket: [
-    // {
-    //   id: "12345677546378",
-    //   title:
-    //     "The lean startup: How constant innovation creates radically Successful Businesses Paperback",
-    //   price: 29.99,
-    //   rating: 4,
-    //   image:
-    //     "https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg ",
-    // },
-  ],
+  basket: [],
   user: null,
 };
 
@@ -19,6 +9,11 @@ export const getBasketTotal = (basket) =>
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
     case "ADD_TO_BASKET":
       return {
         ...state,
