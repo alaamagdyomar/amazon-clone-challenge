@@ -10,7 +10,7 @@ import { auth } from "./Firebase/config";
 
 function App() {
   // intialize the data layer
-  const [{}, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
     // create a listener for logging in & out
@@ -35,6 +35,8 @@ function App() {
       unsubscribe();
     };
   }, []);
+
+  console.log(user);
 
   return (
     <Router>

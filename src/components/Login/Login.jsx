@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "./login.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../../Firebase/config";
+import { useStateValue } from "../../StateProvider";
 
 function Login() {
+  const [{ basket, user }] = useStateValue();
+
   const history = useHistory();
   // 1- initialize variable to update email & password
   const [email, setEmail] = useState("");
